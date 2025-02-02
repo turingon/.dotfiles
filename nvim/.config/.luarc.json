@@ -1,0 +1,11 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "style"
+    ],
+    "diagnostics.disable": [
+        "undefined-global",
+        "lowercase-global",
+        "unused-local"
+    ]
+}

@@ -1,0 +1,42 @@
+[window]
+padding.x = 10
+padding.y = 10
+
+dynamic_padding = true 
+
+decorations = "None"
+
+opacity = 0.6
+
+blur = true
+
+dynamic_title = true 
+
+decorations_theme_variant = "Dark"
+
+[font]
+bold.family = "Hack Nerd Font"
+bold.style = "Bold"
+
+size = 13
+
+[cursor]
+style.shape = "Beam"
+unfocused_hollow = false
+thickness = 0.25
+
+[mouse]
+hide_when_typing = true
+
+[keyboard]
+bindings = [
+{ key = "+", mods = "Control", action = "IncreaseFontSize" },
+{ key = "-", mods = "Control", action = "DecreaseFontSize" },
+]
+
+[env]
+TERM="xterm-256color"
+
+[general]
+import = ["~/.cache/wal/colors-alacritty.toml"]
+live_config_reload = true

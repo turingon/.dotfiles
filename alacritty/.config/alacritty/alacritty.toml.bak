@@ -1,0 +1,44 @@
+import = ["~/.cache/wal/colors-alacritty.toml"]
+
+[window]
+padding.x = 10
+padding.y = 10
+
+dynamic_padding = true
+
+decorations = "None"
+
+opacity = 0.8
+
+blur = true
+
+dynamic_title = true
+
+decorations_theme_variant = "Dark"
+
+[font]
+
+bold.family = "Hack Nerd Font"
+bold.style = "Bold"
+
+size = 13
+
+[colors]
+primary.foreground = "#ffffff"
+#primary.background = "#ffffff"
+#primary.dim_foreground = "#ffffff"
+#normal.black = "#000000"
+
+[cursor]
+style.shape = "Beam"
+unfocused_hollow = false
+thickness = 0.25
+
+[mouse]
+hide_when_typing = true
+
+[keyboard]
+bindings = [
+{ key = "+", mods = "Control", action = "IncreaseFontSize" },
+{ key = "-", mods = "Control", action = "DecreaseFontSize" },
+]

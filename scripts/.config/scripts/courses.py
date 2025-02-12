@@ -25,12 +25,18 @@ class Course():
             return False
         return self.path == other.path
     def edit(self):
+        print(self.path)
         subprocess.call([
             "kitty",
             "--working-directory",
-            f"{self.path}"
+            f"{self.path}/master.pdf"
         ])
-
+    def open(self):
+        print(self.path)
+        subprocess.call([
+            "zathura",
+            f"{self.path}/master.pdf"
+        ])
 class Courses(list):
     def __init__(self):
         list.__init__(self, self.read_files())

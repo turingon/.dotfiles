@@ -23,6 +23,7 @@ def filename2number(s):
 class Lecture():
     
     def __init__(self, file_path, course):
+        print(file_path)
         with file_path.open() as f:
             for line in f:
                 lecture_match = re.search(r'lecture\{(.*?)\}\{(.*?)\}\{(.*)\}', line)
@@ -58,10 +59,11 @@ class Lectures(list):
         self.course = course
         self.root = course.path
         self.master_file = self.root / 'master.tex'
+        self.lectures = self.root / 'lectures'
         list.__init__(self, self.read_files())
 
     def read_files(self):
-        files = self.root.glob('lec_*.tex')
+        files = self.lectures.glob('lec_*.tex')
         return sorted((Lecture(f, self.course) for f in files), key=lambda l: l.number)
 
     def parse_lecture_spec(self, string):

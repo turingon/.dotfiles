@@ -4,7 +4,6 @@ vim.g.maplocalleader = "\\"
 vim.wo.number = true
 vim.opt.termguicolors = true
 
-
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")

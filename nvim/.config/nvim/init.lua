@@ -11,6 +11,20 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.g.clipboard = {
+    name = "wl-clipboard-rs",
+    copy = {
+        ["+"] = "wl-copy",
+        ["*"] = "wl-copy",
+    },
+    paste = {
+        ["+"] = "wl-paste",
+        ["*"] = "wl-paste",
+    },
+    cache_enabled = 1,
+}
+
+
 require("vim-options")
 
 require("lazy").setup("plugins")

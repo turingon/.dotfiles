@@ -16,4 +16,4 @@ code, index, selected = rofi('Select Course:', [ c.info['title'] + " " + f"({c.i
 ])
 
 if index >= 0:
-    courses[index].edit()
+    all_courses[index].edit()

@@ -59,6 +59,7 @@ class Lectures(list):
         self.course = course
         self.root = course.path
         self.master_file = self.root / 'master.tex'
+        self.preamble_file = self.root / 'preamble.tex'
         self.lectures = self.root / 'lectures'
         list.__init__(self, self.read_files())
 
@@ -112,9 +113,8 @@ class Lectures(list):
     def update_lectures_in_master(self, r):
         header, footer = self.get_header_footer(self.master_file)
         body = ''.join(
-            ' ' * 4 + r'\input{' + number2filename(number) + '}\n' for number in r)
+            ' ' * 4 + r'\input{./lectures/' + number2filename(number) + '}\n' for number in r)
         self.master_file.write_text(header + body + footer)
-
     def new_lecture(self):
         if len(self) != 0:
             new_lecture_number = self[-1].number + 1

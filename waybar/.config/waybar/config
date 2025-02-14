@@ -38,11 +38,13 @@
 	    "window-rewrite-default": "",
   	  "window-rewrite": {
 		    "title<.*youtube.*>": "", // Windows whose titles contain "youtube"
+        "title<.*Youtube Music.*>":"",
 		    "class<google-chrome>": "", // Windows whose classes are "firefox"
 		    "class<google-chrome> title<.*github.*>": "", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
 		    "class<kitty>": "", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
 		    "class<kitty> title<.*vim.*>": "",
         "title<.*pdf.*>":"",
+        "title<.*anki.*":"A",
 	    },
     },
     "keyboard-state": {

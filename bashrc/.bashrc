@@ -19,13 +19,15 @@ alias vim='nvim'
 alias ocf='cd ~/OddCodeFolder && nvim'
 alias config='cd ~/.config && vim'
 alias fep="cd FrontEndProjects"
-alias obsidian="cd ~/Obsidian/Obsidian-Notes"
 alias dotfiles="cd ~/.dotfiles"
+alias ci="cd ~/coding-interviews && ls"
+alias notes="cd ~/Notes && ls"
+
 #One Char Aliases
 alias c='clear'
 alias h='Hyprland'
 alias n='neofetch'
-
+alias s="source ~/.bashrc"
 
 #Execute Shortcut Aliases
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
@@ -46,3 +48,4 @@ alias gd="git diff"
 
 PS1='[\u@\h \W]\$ '
 
+#alias obsidian="cd ~/Obsidian/Obsidian-Notes"

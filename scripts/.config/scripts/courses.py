@@ -34,13 +34,13 @@ class Course():
         subprocess.call([
             "zathura",
             f"{self.path}/master.pdf"
-        ])
+        ]) 
 class Courses(list):
     def __init__(self):
         list.__init__(self, self.read_files())
 
     def read_files(self):
-        course_directories = [x for x in ROOT.iterdir() if x.is_dir()]
+        course_directories = [x for x in ROOT.glob('*') if not any([p for p in x.resolve().parts if p.startswith(".")]) and x.is_dir()]
         _courses = [Course(path) for path in course_directories]
         return sorted(_courses, key=lambda c: c.name)
 

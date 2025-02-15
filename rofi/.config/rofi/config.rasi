@@ -63,7 +63,7 @@ imagebox {
     padding:                     20px;
     border-radius:10px;
     background-color:            transparent;
-    background-image:            url("~/.dotfiles/wallpapers/.config/wallpapers/space-1.jpg", height);
+    background-image:            url("~/.dotfiles/wallpapers/.config/wallpapers/vader-1.jpg", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }

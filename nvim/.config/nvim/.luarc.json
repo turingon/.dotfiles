@@ -6,6 +6,7 @@
     "diagnostics.disable": [
         "undefined-global",
         "lowercase-global",
-        "unused-local"
+        "unused-local",
+        "unused-function"
     ]
 }

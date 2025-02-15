@@ -27,6 +27,6 @@ vim.g.clipboard = {
 
 require("vim-options")
 
-require("lazy").setup("plugins")
+require("lazy").setup("plugins",{})
 
 

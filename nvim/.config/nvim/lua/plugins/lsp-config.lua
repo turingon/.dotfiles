@@ -14,7 +14,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "clangd", "pyright","tailwindcss" },
+        ensure_installed = { "lua_ls", "clangd", "pyright", "tailwindcss", "texlab" },
       })
     end,
   },
@@ -64,10 +64,14 @@ return {
       })
 
       --LaTeX
-      --lspconfig.ltex.setup({
-        --capabilities = capabilities
-      --})
-
+      lspconfig.texlab.setup({
+        capabilities = capabilities
+      })
+        
+      --Hyprland
+      lspconfig.hyprls.setup({
+        capabilities = capabilities
+      })
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "C", vim.lsp.buf.code_action, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
@@ -75,6 +79,7 @@ return {
       vim.keymap.set("n", "<leader>rn", ":lua vim.lsp.buf.rename()<CR>")
       vim.keymap.set("n", "<leader>gr", ":lua vim.lsp.buf.references()<CR>")
 
+      vim.keymap.set("n", "<C-a>", vim.lsp.buf.format, {})
       vim.keymap.set("v", "<C-r>", ":lua vim.lsp.buf.rename()<CR>")
     end,
 

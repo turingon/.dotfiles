@@ -9,7 +9,7 @@ sorted_lectures = sorted(lectures, key=lambda l: -l.number)
 
 options = [
     "{number: >2}. <b>{title: <{fill}}</b> <span size='smaller'>{date}  ({hour})</span>".format(
-        fill=MAX_LEN, 
+        fill=10, 
         number=lecture.number,
         title=generate_short_title(lecture.title),
         date=lecture.date.strftime('%a %-d %B %Y'),
@@ -21,8 +21,6 @@ options = [
 key, index, selected = rofi('Select Lecture:', options, [
     '-lines', 5,
     '-markup-rows',
-    '-kb-row-down', 'Down',
-    '-kb-custom-1', 'Ctrl+n'
 ])
 #print("key = ",key," index = ",index," selected = ", selected)
 if key == 0:

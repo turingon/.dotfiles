@@ -34,9 +34,11 @@ vim.cmd("inoremap <C-a> <Left>")
 vim.cmd("inoremap <C-s> <Up>")
 vim.cmd("inoremap <C-d> <Down>")
 vim.cmd("inoremap <C-f> <Right>")
+vim.cmd("inoremap <C-b> <Esc>bi")
+vim.cmd("inoremap <C-e> <Esc>wwi")
 
 
---Save 
+--Save
 vim.cmd("inoremap <F3> <c-o>:w<cr>")
 
 --Undo Redo Not Working

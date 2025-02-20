@@ -67,7 +67,7 @@ return {
       lspconfig.texlab.setup({
         capabilities = capabilities
       })
-        
+
       --Hyprland
       lspconfig.hyprls.setup({
         capabilities = capabilities

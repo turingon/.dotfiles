@@ -14,7 +14,8 @@ return {
         --Python Setup
         null_ls.builtins.formatting.black,
         null_ls.builtins.diagnostics.mypy,
-        --null_ls.builtins.diagnostics.ruff,
+        require("none-ls.diagnostics.ruff"),
+
 
         null_ls.builtins.formatting.google_java_format,
 

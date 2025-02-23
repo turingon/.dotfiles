@@ -13,16 +13,52 @@ return {
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
-      { "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
+      {
+        "roobert/tailwindcss-colorizer-cmp.nvim",
+        "hrsh7th/cmp-path",
+        "hrsh7th/cmp-buffer",
+        "hrsh7th/cmp-cmdline",
+        config = true
+      },
     },
     opts = function(_, opts)
       opts.formatting = {
         format = require("tailwindcss-colorizer-cmp").formatter,
       }
     end,
+
     config = function()
       local cmp = require("cmp")
       require("luasnip.loaders.from_vscode").lazy_load()
+
+      cmp.setup.cmdline('/', {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = {
+          { name = 'buffer' }
+        }
+      })
+
+
+      cmp.setup.cmdline('?', {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = {
+          { name = 'buffer' }
+        }
+      })
+
+
+      cmp.setup.cmdline(':', {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = {
+          { name = 'cmdline' },
+          {
+            name = 'path'
+          }
+        }
+      })
+
+
+
       cmp.setup({
         snippet = {
           expand = function(args)

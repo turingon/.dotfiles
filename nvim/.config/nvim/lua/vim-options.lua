@@ -35,7 +35,7 @@ vim.cmd("inoremap <C-s> <Up>")
 vim.cmd("inoremap <C-d> <Down>")
 vim.cmd("inoremap <C-f> <Right>")
 vim.cmd("inoremap <C-b> <Esc>bi")
-vim.cmd("inoremap <C-e> <Esc>wwi")
+vim.cmd("inoremap <C-e> <Esc>ea")
 
 
 --Save

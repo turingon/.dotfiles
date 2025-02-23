@@ -20,57 +20,66 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
-
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require("lspconfig")
+      --      local def = require("lsp.default-lsp")
 
       lspconfig.lua_ls.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
+        --        on_attach = def.on_attach
       })
 
       -- Python Setup
       lspconfig.pyright.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
+        --        on_attach = def.on_attach
       })
+
       --[[lspconfig.pylsp.setup({
         capabilities = capabilities
       })--]]
 
-
       --C/C++ Setup
       lspconfig.clangd.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
+        --        on_attach = def.on_attach
       })
 
       --Web Dev Setup
       --HTML
       lspconfig.html.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
+        --        on_attach = def.on_attach
       })
 
       --CSS
       lspconfig.cssls.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
+        --        on_attach = def.on_attach
       })
 
       lspconfig.tailwindcss.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
+        --        on_attach = def.on_attach
       })
 
       --TS/JS
       lspconfig.ts_ls.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
+        --        on_attach = def.on_attach
       })
 
       --LaTeX
       lspconfig.texlab.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
+        --        on_attach = def.on_attach
       })
 
       --Hyprland
       lspconfig.hyprls.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
+        --        on_attach = def.on_attach
       })
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "C", vim.lsp.buf.code_action, {})
@@ -78,9 +87,7 @@ return {
       vim.keymap.set("n", "<leader>gi", ":lua vim.lsp.buf.implementation()<CR>")
       vim.keymap.set("n", "<leader>rn", ":lua vim.lsp.buf.rename()<CR>")
       vim.keymap.set("n", "<leader>gr", ":lua vim.lsp.buf.references()<CR>")
-
       vim.keymap.set("n", "<C-a>", vim.lsp.buf.format, {})
-      vim.keymap.set("v", "<C-r>", ":lua vim.lsp.buf.rename()<CR>")
     end,
 
   },

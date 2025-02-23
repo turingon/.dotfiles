@@ -23,7 +23,7 @@ return {
       vim.keymap.set("n", "<leader>fa", "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>")
       vim.keymap.set("n", "<leader>fe", "<cmd> Telescope file_browser <CR>")
       vim.keymap.set("n", "<leader>fo", "<cmd> Telescope oldfiles <CR>")
-      vim.keymap.set("n", "<leader>fc", "<cmd> Telescope colorschemes <CR>")
+      vim.keymap.set("n", "<leader>fc", "<cmd> Telescope colorscheme <CR>")
     end,
   },
   {

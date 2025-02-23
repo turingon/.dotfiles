@@ -22,6 +22,9 @@ alias fep="cd FrontEndProjects"
 alias dotfiles="cd ~/.dotfiles"
 alias ci="cd ~/coding-interviews && ls"
 alias notes="cd ~/Notes && ls"
+alias osf="cd ~/open-source-friday"
+
+
 
 #One Char Aliases
 alias c='clear'

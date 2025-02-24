@@ -27,6 +27,7 @@ vim.g.nord_italic = false
 vim.g.nord_uniform_diff_background = true
 vim.g.nord_bold = true
 
+--Latex Inkscape Commands
 --Some Useful Insert Mode Bindings
 
 --Navigate

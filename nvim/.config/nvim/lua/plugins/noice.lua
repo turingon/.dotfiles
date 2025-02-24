@@ -14,6 +14,10 @@ return -- lazy.nvim
     "rcarriga/nvim-notify",
   },
   config = function()
+    require('notify').setup({
+      -- other stuff
+      background_colour = "#000000"
+    })
     require("noice").setup(
       {
         cmdline = {

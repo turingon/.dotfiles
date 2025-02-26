@@ -45,6 +45,8 @@
 		    "class<kitty> title<.*vim.*>": "",
         "title<.*pdf.*>":"",
         "title<.*anki.*":"A",
+        "class<spotify>":"",
+        "title<.*monkeytype.*>":"󰌌"
 	    },
     },
     "keyboard-state": {

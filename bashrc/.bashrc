@@ -4,7 +4,7 @@
 
 # If not running interactively, don't do anything
 
-eval "$(oh-my-posh init bash --config https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/negligible.omp.json)"
+eval "$(oh-my-posh init bash --config /home/doruk/.dotfiles/posh-themes/themes/negligible.omp.json)"
 
 
 [[ $- != *i* ]] && return

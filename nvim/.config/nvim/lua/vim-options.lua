@@ -28,7 +28,7 @@ vim.g.nord_uniform_diff_background = true
 vim.g.nord_bold = true
 
 --Latex Inkscape Commands
-vim.cmd("inoremap <C-i> <ESC>:silent exec '!inkscape-figures create '.getline('.')' ./figures/ '<CR><CR>:w<CR> ")
+--vim.cmd("inoremap <C-i> <ESC>:silent exec '!inkscape-figures create '.getline('.')' ./figures/ '<CR><CR>:w<CR> ")
 vim.cmd("nnoremap <C-i> :silent exec '!inkscape-figures edit ./figures/ > /dev/null 2>&1 & '<CR><CR>:redraw!<CR>")
 --Some Useful Insert Mode Bindings
 

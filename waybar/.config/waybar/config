@@ -46,7 +46,9 @@
         "title<.*pdf.*>":"",
         "title<.*anki.*":"A",
         "class<spotify>":"",
-        "title<.*monkeytype.*>":"󰌌"
+        "title<.*monkeytype.*>":"󰌌",
+        "class<firefox>":"",
+        "class<firefox-developer-edition>":""
 	    },
     },
     "keyboard-state": {

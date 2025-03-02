@@ -25,17 +25,20 @@ configuration {
 * {
     font:                        "JetBrains Mono Nerd Font 10";
     background:                  transparent;
+
+    /*
+
+    selected:                    #31534D;
     background-alt:              #5A5B59;
     foreground:                  #8be5e0;
-    selected:                    #31534D;
-    active:                      #B25151;
-    urgent:                      #FEA861;
+    urgent:                      #FEA861
+    */    
 }
 
 /*****----- Main Window -----*****/
 window {
     /* properties for window widget */
-    background-image:            url("~/.dotfiles/wallpapers/.config/wallpapers/vader-1.jpg", height);
+    background-image:            url("./background", height);
     transparency:                "real";
     location:                    center;
     anchor:                      center;
@@ -119,7 +122,7 @@ button {
     cursor:                      pointer;
 }
 button selected {
-    background-color:            @selected;
+    background-color:            @selected-active-background;
     text-color:                  @foreground;
 }
 
@@ -169,7 +172,7 @@ element normal.active {
     text-color:                  @foreground;
 }
 element selected.normal {
-    background-color:            @selected;
+    background-color:            @selected-active-background;
     text-color:                  @foreground;
 }
 element selected.urgent {

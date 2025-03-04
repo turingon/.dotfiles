@@ -76,9 +76,9 @@ return {
           untracked    = { text = '┆' },
         },
         signs_staged                 = {
-          add          = { text = '┃' },
-          change       = { text = '┃' },
-          delete       = { text = '_' },
+          add          = { text = 'A' },
+          change       = { text = 'C' },
+          delete       = { text = 'D' },
           topdelete    = { text = '‾' },
           changedelete = { text = '~' },
           untracked    = { text = '┆' },

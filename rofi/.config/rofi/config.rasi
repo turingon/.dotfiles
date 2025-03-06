@@ -1,12 +1,3 @@
-/**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
- * Rofi Theme File
- * Rofi Version: 1.7.3
- **/
-
 @theme "~/.cache/wal/colors-rofi-dark.rasi"
 
 /*****----- Configuration -----*****/
@@ -19,11 +10,15 @@ configuration {
     display-window:             "WINDOW";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
+  hover-select: true;
+  me-select-entry: "";
+  me-select-entry: "MousePrimary";
+  me-accept-entry: "!MousePrimary";
 }
 
 /*****----- Global Properties -----*****/
 * {
-    font:                        "JetBrains Mono Nerd Font 10";
+    font:                        "JetBrains Mono Nerd Font 11";
     background:                  transparent;
 
     /*
@@ -43,7 +38,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       950px;
+    width:                       960px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -93,7 +88,7 @@ inputbar {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         "  ";
+    str:                         " ";
     background-color:            inherit;
     text-color:                  inherit;
   
@@ -131,9 +126,9 @@ listview {
     enabled:                     true;
     columns:                     1;
     lines:                       8;
-    cycle:                       false;
-    dynamic:                     false;
-    scrollbar:                   false;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   true;
     layout:                      vertical;
     reverse:                     false;
     fixed-height:                true;

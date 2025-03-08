@@ -48,7 +48,8 @@
         "class<spotify>":"",
         "title<.*monkeytype.*>":"󰌌",
         "class<firefox>":"",
-        "class<firefox-developer-edition>":""
+        "class<firefox-developer-edition>":"",
+        "class<unityhub>":""
 	    },
     },
     "keyboard-state": {

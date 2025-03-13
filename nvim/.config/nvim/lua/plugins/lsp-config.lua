@@ -14,7 +14,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "clangd", "pyright", "tailwindcss", "texlab" },
+        ensure_installed = { "lua_ls", "clangd", "pyright", "tailwindcss", "texlab", "omnisharp" },
       })
     end,
   },
@@ -24,7 +24,6 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require("lspconfig")
       --      local def = require("lsp.default-lsp")
-
       lspconfig.lua_ls.setup({
         capabilities = capabilities,
         --        on_attach = def.on_attach
@@ -81,6 +80,19 @@ return {
         capabilities = capabilities,
         --        on_attach = def.on_attach
       })
+
+      --Unity
+      lspconfig.omnisharp.setup({
+        capabilities = capabilities,
+        settings = {
+          useModernNet = false,
+          monoPath = vim.fn.system { 'which', 'mono' }
+        },
+        cmd = { 'omnisharp', '--languageserver', '--hostPID', tostring(vim.fn.getpid()) },
+        filetypes = { 'cs' },
+        root_dir = lspconfig.util.root_pattern('*.csproj', '*.sln', '.git'),
+      })
+
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "C", vim.lsp.buf.code_action, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})

@@ -20,8 +20,7 @@ return {
         null_ls.builtins.formatting.google_java_format,
 
         --TS/JS Setup
-        null_ls.builtins.formatting.prettier,
-        --require("none-ls.diagnostics.eslint"),
+        null_ls.builtins.formatting.biome,
 
         --Latex Setup
         require("none-ls.formatting.latexindent")

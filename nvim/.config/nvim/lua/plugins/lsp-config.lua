@@ -66,7 +66,11 @@ return {
       --TS/JS
       lspconfig.ts_ls.setup({
         capabilities = capabilities,
-        --        on_attach = def.on_attach
+        init_options = {
+          preferences = {
+            disableSuggestions = true;
+          }
+        }
       })
 
       --LaTeX

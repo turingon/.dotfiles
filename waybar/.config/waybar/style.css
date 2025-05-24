@@ -13,24 +13,18 @@ window#waybar {
   padding: 7px;
   margin: 5px;
   border-radius: 10px;
-  background: alpha(@background, 0.5);
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
 }
 
 .modules-center {
   padding: 7px;
   margin: 5px;
   border-radius: 10px;
-  background: alpha(@background, 0.5);
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
 }
 
 .modules-right {
   padding: 7px;
   margin: 5px;
   border-radius: 10px;
-  background: alpha(@background, 0.5);
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
 }
 
 tooltip {
@@ -48,13 +42,13 @@ tooltip {
 #memory:hover,
 #temperature:hover {
   transition: all 0.3s ease;
-  color: @color;
+  color: @color2;
 }
 
 #custom-notification {
   padding: 0px 5px;
   transition: all 0.3s ease;
-  color: @color;
+  color: @color2;
 }
 
 #clock {
@@ -88,7 +82,7 @@ tooltip {
 }
 
 #workspaces button.active {
-  color: @color6;
+  color: @color3;
   border: none;
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
 }

@@ -1,9 +1,12 @@
 return {
-    "LunarVim/breadcrumbs.nvim",
-    dependencies = {
-        { "SmiteshP/nvim-navic" },
-    },
-    config = function()
-        require("breadcrumbs").setup()
-    end
+  "utilyre/barbecue.nvim",
+  name = "barbecue",
+  version = "*",
+  dependencies = {
+    "SmiteshP/nvim-navic",
+    "nvim-tree/nvim-web-devicons", -- optional dependency
+  },
+  opts = {
+    -- configurations go here
+  },
 }

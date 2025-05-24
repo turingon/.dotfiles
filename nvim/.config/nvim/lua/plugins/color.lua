@@ -243,5 +243,88 @@ return {
         }
       })
     end
+  },
+  {
+    "ficcdaf/ashen.nvim",
+    -- optional but recommended,
+    -- pin to the latest stable release:
+    tag = "*",
+    lazy = false,
+    priority = 1000,
+    -- configuration is optional!
+    opts = {
+
+      -- toggle text style options
+      ---@type table<StyleName, boolean>
+      style = {},
+      -- toggle group specific settings
+      style_presets = {
+        bold_functions = false,
+        italic_comments = false,
+      },
+      --- override palette colors
+      ---@type Palette
+      ---@field [ColorName] HexCode
+      colors = {},
+      -- override highlight groups
+      hl = {
+        ---Overwrite; omitted fields are cleared
+        ---@type HighlightMap
+        force_override = {},
+        ---Merge fields with defaults
+        ---@type HighlightMap
+        merge_override = {},
+        ---Link Highlight1 -> Highlight2
+        ---Overrides all default links
+        ---@type table<HighlightName, HighlightName>
+        link = {},
+      },
+      -- use transparent background
+      -- (requires terminal support)
+      transparent = true,
+      -- force clear other highlights
+      -- even if no other theme is set
+      force_hi_clear = true,
+      -- set built-in terminal colors
+      terminal = {
+        -- if disabled, Neovim terminal will
+        -- use your terminal emulator's theme
+        enabled = true,
+        ---override terminal palette
+        ---@type AnsiMap
+        colors = {},
+      },
+      -- configure plugin integrations
+      plugins = {
+        -- automatically load plugin integrations
+        autoload = true,
+        ---if autoload: plugins to SKIP
+        ---if not autoload: plugins to LOAD
+        ---@type string[]
+        override = {},
+      },
+    }
+  },
+  {
+    'olivercederborg/poimandres.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require('poimandres').setup {
+        -- leave this setup function empty for default config
+        -- or refer to the configuration section
+        -- for configuration options
+        bold_vert_split = true,          -- use bold vertical separators
+        dim_nc_background = true,        -- dim 'non-current' window backgrounds
+        disable_background = true,       -- disable background
+        disable_float_background = true, -- disable background for floats
+        disable_italics = false,          -- disable italics
+      }
+    end,
+
+    -- optionally set the colorscheme within lazy config
+    init = function()
+      vim.cmd("colorscheme poimandres")
+    end
   }
 }

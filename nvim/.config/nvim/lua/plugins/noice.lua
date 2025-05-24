@@ -16,6 +16,10 @@ return -- lazy.nvim
   config = function()
     require('notify').setup({
       -- other stuff
+      stages = "slide",
+      max_width = 50,
+      max_height = 30,
+      top_down = false,
       background_colour = "#000000"
     })
     require("noice").setup(

@@ -8,6 +8,9 @@ eval "$(oh-my-posh init bash --config /home/doruk/.dotfiles/posh-themes/themes/k
 fortune -s | cowsay -f tux
 
 [[ $- != *i* ]] && return
+# kitty ssh fix
+[[ "$TERM" == "xterm-kitty" ]] && alias ssh="TERM=xterm-256color ssh" 
+
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -16,6 +19,7 @@ alias grep='grep --color=auto'
 alias root='cd /'
 alias home='cd ~'
 alias vim='nvim'
+alias vi='nvim'
 alias ocf='cd ~/OddCodeFolder && nvim'
 alias config='cd ~/.config && vim'
 alias fep="cd ~/FrontEndProjects"
@@ -52,3 +56,4 @@ alias gd="git diff"
 PS1='[\u@\h \W]\$ '
 
 #alias obsidian="cd ~/Obsidian/Obsidian-Notes"
+export TERM=xterm-256color

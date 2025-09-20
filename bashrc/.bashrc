@@ -27,7 +27,7 @@ alias dotfiles="cd ~/.dotfiles"
 alias ci="cd ~/coding-interviews && ls"
 alias notes="cd ~/Notes && ls"
 alias osf="cd ~/open-source-friday"
-
+alias myserver="ssh root@103.83.87.37"
 
 
 #One Char Aliases

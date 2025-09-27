@@ -4,7 +4,7 @@
 
 # If not running interactively, don't do anything
 
-eval "$(oh-my-posh init bash --config /home/doruk/.dotfiles/posh-themes/themes/kushal.omp.json)"
+eval "$(oh-my-posh init bash --config ~/.dotfiles/posh-themes/theme.omp.json)"
 fortune -s | cowsay -f tux
 
 [[ $- != *i* ]] && return

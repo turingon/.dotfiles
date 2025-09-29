@@ -4,7 +4,9 @@
 
 # If not running interactively, don't do anything
 
-eval "$(oh-my-posh init bash --config ~/.dotfiles/posh-themes/theme.omp.json)"
+# eval "$(oh-my-posh init bash --config ~/.dotfiles/posh-themes/theme.omp.json)"
+eval "$(starship init bash)"
+eval "$(zoxide init bash)"
 fortune -s | cowsay -f tux
 
 [[ $- != *i* ]] && return
@@ -20,19 +22,13 @@ alias root='cd /'
 alias home='cd ~'
 alias vim='nvim'
 alias vi='nvim'
-alias ocf='cd ~/OddCodeFolder && nvim'
-alias config='cd ~/.config && vim'
-alias fep="cd ~/FrontEndProjects"
 alias dotfiles="cd ~/.dotfiles"
-alias ci="cd ~/coding-interviews && ls"
-alias notes="cd ~/Notes && ls"
-alias osf="cd ~/open-source-friday"
 alias myserver="ssh root@103.83.87.37"
-
+alias code="cd ~/Code/"
+alias projects="cd ~/Projects/"
 
 #One Char Aliases
 alias c='clear'
-alias h='Hyprland'
 alias n='neofetch'
 alias s="source ~/.bashrc"
 
@@ -44,13 +40,6 @@ alias cpp="g++ -o"
 
 #Github Aliases
 alias gs="git status"
-alias ga="git add"
-alias gc="git commit"
-alias gp="git push"
-alias gpull="git pull"
-alias gd="git diff"
-
-#SSH Agent Initialize
 
 
 PS1='[\u@\h \W]\$ '
